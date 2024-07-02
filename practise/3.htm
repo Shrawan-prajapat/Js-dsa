@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>progrram 3</title>
+</head>
+
+<body>
+    <script>
+        function findSecondLargest(a) {
+            if (a.length < 2) {
+                return null;
+            }
+
+            let largest = -Infinity;
+            let secondLargest = -Infinity;
+
+            for (let i = 0; i < a.length; i++) {
+                if (a[i] > largest) {
+                    secondLargest = largest;
+                    largest = a[i];
+                } else if (a[i] > secondLargest && a[i] != largest) {
+                    secondLargest = a[i];
+                }
+            }
+
+            return secondLargest;
+        }
+
+        let a1 = [1, 2, 10, 68, 37, 20, 85, 75];
+        let secondLargest = findSecondLargest(a1);
+        console.log(secondLargest);
+    </script>
+</body>
+
+</html>

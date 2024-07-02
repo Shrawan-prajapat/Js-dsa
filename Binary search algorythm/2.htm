@@ -1,0 +1,16 @@
+<script>
+    const arr=[2,6,10,14];
+    let start=0;
+    let end=arr.length;
+    let target=18;
+    let ans=[];
+
+    while(start<end){
+        let sum=arr[start]+arr[end];
+        if(sum==target){
+            ans.push(arr[start],arr[end]);
+            start++;
+            end--;
+        }
+    }
+</script>

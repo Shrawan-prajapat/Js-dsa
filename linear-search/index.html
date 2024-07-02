@@ -1,0 +1,23 @@
+<script type="text/javascript">
+
+    function binarysearch(arr, target) {
+        let start = 0;
+        let end = arr.length - 1;
+        while (start <= end) {
+            let middle = Math.floor((start + end) / 2);
+            if (arr[middle] < target) {
+                start = middle + 1;
+            } else if (arr[middle] > target) {
+                end = middle - 1;
+            } else {
+                return middle;
+
+            }
+        }
+    }
+
+    let a = [10, 12, 14, 18, 22, 33];
+    let tar = 10;
+    let ans = binarysearch(a, tar);
+    console.log(ans)
+</script>

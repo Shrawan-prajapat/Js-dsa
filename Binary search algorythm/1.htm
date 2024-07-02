@@ -1,0 +1,23 @@
+<script>
+    function findMaxValue(arr) {
+    if (arr.length === 0) {
+        throw new Error("Array is empty");
+    }
+
+    let maxValue = arr[0];
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > maxValue) {
+            maxValue = arr[i];
+        }
+    }
+
+    return maxValue;
+}
+
+// Example usage:
+const array = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5];
+const maxValue = findMaxValue(array);
+console.log("The maximum value in the array is:", maxValue);
+
+</script>

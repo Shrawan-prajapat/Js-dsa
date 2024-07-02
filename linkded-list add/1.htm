@@ -1,0 +1,68 @@
+<script>
+    class Node{
+        constructor(val){
+            this.data=val
+            this.next=null
+        }
+    }
+
+    class Linkedlist{
+        constructor(){
+            this.head=null
+        }
+
+        addlist(data){
+            const newNode=new Node(data)
+            if(!this.head){
+                this.head=newNode
+                return;
+            }
+
+            let current=this.head;
+            while(current.next){
+                current=current.next
+            }
+            current.next=newNode;
+        }
+        print(){
+            let current=this.head;
+            while(current){
+                console.log(current.data);
+                current=current.next;
+            }
+        }
+        deletelist(index){
+            let current=this.head;
+            for(let i=0;i<index-1;i++){
+                    current=current.next
+            }
+            current.next=current.next.next;
+        }
+        updatelist(index,newNode){
+            let current=this.head;
+            let count=0;
+            while(count<index){
+                current=current.next;
+                count++;
+            }
+            current.data=newNode;
+        }
+    }
+    const linkedlist=new Linkedlist();
+    linkedlist.addlist(1)
+    linkedlist.addlist(2)
+    linkedlist.addlist(3)
+    linkedlist.addlist(4)
+    linkedlist.addlist(5)
+    linkedlist.addlist(6)
+    linkedlist.addlist(7)
+    linkedlist.print()
+
+    console.log("deleate Node")
+    linkedlist.deletelist(3)
+    linkedlist.print()
+
+    console.log("update node")
+    linkedlist.updatelist(2,33)
+    linkedlist.print()
+</script>

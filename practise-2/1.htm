@@ -1,0 +1,55 @@
+<script type="text/javascript">
+
+    class Node {
+        constructor(val) {
+            this.data = val;
+            this.next = null
+        }
+    }
+
+    class LinkedList {
+
+        constructor() {
+            this.head = null
+        }
+
+        addList(data) {
+            const newNode= new Node(data)
+
+            if (!this.head) {
+                this.head = newNode
+                return;
+            }
+
+            let current = this.head;
+            while (current.next) {
+                current = current.next
+            }
+            current.next = newNode;
+        }
+
+        print() {
+            let current = this.head;
+            while (current) {
+                console.log(current.data);
+                current = current.next
+            }
+
+        }
+
+       
+       
+    }
+
+    const linkedlist = new LinkedList();
+    linkedlist.addList(1)
+    linkedlist.addList(2)
+    linkedlist.addList(3)
+    linkedlist.addList(4)
+    linkedlist.addList(5)
+    linkedlist.addList(6)
+
+    linkedlist.print()
+   
+
+</script>
