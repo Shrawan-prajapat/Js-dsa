@@ -1,0 +1,25 @@
+<script>
+    console.log("even number:");
+    let last = prompt('Enter lasting point');
+    let even = [];
+    let odd =[];
+
+    function demo(num, lastpoint) {
+        if (num <= lastpoint) {
+            if (num % 2 == 0) {
+                even.push(num);
+            }
+            else{
+                odd.push(num);
+            }
+            let newNumber = num + 1;
+            demo(newNumber, lastpoint);
+        }
+    }
+
+    demo(1, last);
+    console.log(even);
+    console.log("odd number:")
+    console.log(odd);
+
+</script>

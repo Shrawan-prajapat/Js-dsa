@@ -1,11 +1,14 @@
 <script>
-    let sum=0;
-    function demo(no){
-        console.log(no);
-        let newnumber=no-1;
-        if(newnumber>0){
-            demo(newnumber);
-        }
+
+
+function print(no) {
+    console.log(no);
+
+    let newNumber = no + 1;
+    if (newNumber <= 10) {
+        print(newNumber);
     }
-    demo(3)
+}
+
+print(1);
 </script>
