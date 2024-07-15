@@ -1,0 +1,14 @@
+<script>
+    let arr=[11,1,13,21,3,15];
+   let n=arr.length;
+   for(let i=0;i<n;i++){
+    let next=-1;
+    for(let j=i+1;j<n;j++){
+        if(arr[i]<arr[j]){       
+            next=arr[j];
+        }
+        break;
+    }
+    console.log(`${arr[i]} --> ${next}`)
+   }
+</script>

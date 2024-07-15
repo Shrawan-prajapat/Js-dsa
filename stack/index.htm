@@ -1,0 +1,20 @@
+<script>
+    class Node{
+        constructor(){
+            this.items=[];
+        }
+        push(element){
+            this.items.push(element);
+        }
+        printStack() {
+    console.log(this.items.join(' '));
+  }
+
+    }
+    let node=new Node();
+    node.push(10);
+    node.push(20);
+    node.push(30);
+
+    node.printStack(); 
+</script>
